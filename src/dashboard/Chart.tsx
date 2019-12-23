@@ -60,10 +60,3 @@ export default function Chart() {
     </React.Fragment>
   );
 }
-
-/* <Line
-            type="monotone"
-            dataKey="amount"
-            stroke={theme.palette.primary.main}
-            dot={false}
-          /> */

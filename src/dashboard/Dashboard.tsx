@@ -18,10 +18,11 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import {mainListItems, secondaryListItems} from './listItems';
+import {mainListItems} from './listItems';
 import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+import Judgements from './Judgements';
+import Conditions from './Conditions';
+import FileUploader from './FileUploader';
 
 function Copyright() {
   return (
@@ -189,16 +190,22 @@ export default function Dashboard() {
                 <Chart />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+            {/* Recent Judgements */}
             <Grid item xs={12} md={5} lg={4}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Judgements />
               </Paper>
             </Grid>
-            {/* Recent Orders */}
-            <Grid item xs={12}>
+            {/* File Upload */}
+            <Grid item xs={12} md={5} lg={6}>
               <Paper className={classes.paper}>
-                <Orders />
+                <FileUploader />
+              </Paper>
+            </Grid>
+            {/* Recent Conditions */}
+            <Grid item xs={12} md={7} lg={6}>
+              <Paper className={classes.paper}>
+                <Conditions />
               </Paper>
             </Grid>
           </Grid>
